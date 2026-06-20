@@ -162,6 +162,8 @@ pnpm dev:core
 # 或手动部署
 git clone https://github.com/XyhTender/qq-farm-bot.git
 cd qq-farm-bot
+cp .env.example .env
+# 按需修改 .env 中的 ADMIN_USER / ADMIN_PASSWORD
 pnpm install
 pnpm build:web
 pnpm dev:core
@@ -231,11 +233,13 @@ chmod +x ./qq-farm-bot && ./qq-farm-bot
 
 ### 环境变量
 
-| 变量名           | 默认值  | 说明         |
-| ---------------- | ------- | ------------ |
-| `ADMIN_PORT`     | `3007`  | Web 面板端口 |
-| `ADMIN_USER`     | `admin` | 管理员用户名 |
-| `ADMIN_PASSWORD` | `admin` | 管理员密码   |
+| 变量名 | 默认值 | 说明 |
+|--------|--------|------|
+| `ADMIN_PORT` | `3007` | Web 面板端口 |
+| `ADMIN_USER` | `admin` | 管理员用户名 |
+| `ADMIN_PASSWORD` | `admin` | 管理员密码 |
+
+根目录 `.env` 用于保存本地或服务端私密配置，已在 `.gitignore` 中忽略。请提交 `.env.example`，不要提交 `.env`。
 
 ### 种植策略
 
