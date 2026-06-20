@@ -2,7 +2,10 @@ packages:
   - core
   - web
 
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
-  - protobufjs
+overrides:
+  "@babel/traverse": 7.26.10
+
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+  protobufjs: true
