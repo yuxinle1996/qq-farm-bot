@@ -120,11 +120,11 @@ qq-farm-bot/
 
 ## 环境要求
 
-| 运行方式 | 要求 |
-|---------|------|
+| 运行方式 | 要求                                                 |
+| -------- | ---------------------------------------------------- |
 | 源码运行 | Node.js 20+，pnpm（推荐通过 `corepack enable` 启用） |
-| 二进制版 | 无需安装 Node.js，直接运行 |
-| Docker | Docker 20+，Docker Compose 2+ |
+| 二进制版 | 无需安装 Node.js，直接运行                           |
+| Docker   | Docker 20+，Docker Compose 2+                        |
 
 ---
 
@@ -168,6 +168,7 @@ pnpm dev:core
 ```
 
 启动后访问面板：
+
 - 本机：`http://localhost:3007`
 - 局域网：`http://<你的IP>:3007`
 
@@ -205,11 +206,11 @@ pnpm package:release
 
 产物输出在 `dist/bin/` 目录，也可在 [Releases](https://github.com/XyhTender/qq-farm-bot/releases) 中直接下载。
 
-| 平台 | 文件名 |
-|------|--------|
-| Windows x64 | `qq-farm-bot.exe` |
-| Linux x64 | `qq-farm-bot` |
-| macOS Intel | `qq-farm-bot-x64` |
+| 平台                | 文件名              |
+| ------------------- | ------------------- |
+| Windows x64         | `qq-farm-bot.exe`   |
+| Linux x64           | `qq-farm-bot`       |
+| macOS Intel         | `qq-farm-bot-x64`   |
 | macOS Apple Silicon | `qq-farm-bot-arm64` |
 
 #### 运行
@@ -230,33 +231,33 @@ chmod +x ./qq-farm-bot && ./qq-farm-bot
 
 ### 环境变量
 
-| 变量名 | 默认值 | 说明 |
-|--------|--------|------|
-| `ADMIN_PORT` | `3007` | Web 面板端口 |
-| `ADMIN_USER` | `admin` | 管理员用户名 |
-| `ADMIN_PASS` | `admin` | 管理员密码 |
+| 变量名           | 默认值  | 说明         |
+| ---------------- | ------- | ------------ |
+| `ADMIN_PORT`     | `3007`  | Web 面板端口 |
+| `ADMIN_USER`     | `admin` | 管理员用户名 |
+| `ADMIN_PASSWORD` | `admin` | 管理员密码   |
 
 ### 种植策略
 
-| 策略 | 说明 |
-|------|------|
-| `max_exp` | 最大经验值（默认） |
-| `max_profit` | 最大利润 |
-| `max_fert_exp` | 施肥最大经验 |
-| `max_fert_profit` | 施肥最大利润 |
-| `level` | 按等级种植 |
-| `preferred` | 优先种植指定作物 |
-| `bag_priority` | 背包种子优先 |
+| 策略              | 说明               |
+| ----------------- | ------------------ |
+| `max_exp`         | 最大经验值（默认） |
+| `max_profit`      | 最大利润           |
+| `max_fert_exp`    | 施肥最大经验       |
+| `max_fert_profit` | 施肥最大利润       |
+| `level`           | 按等级种植         |
+| `preferred`       | 优先种植指定作物   |
+| `bag_priority`    | 背包种子优先       |
 
 ### 施肥模式
 
-| 模式 | 说明 |
-|------|------|
-| `smart` | 智能施肥（默认） |
-| `both` | 有机肥 + 普通肥 |
-| `organic` | 仅有机肥 |
-| `normal` | 仅普通肥 |
-| `none` | 关闭施肥 |
+| 模式      | 说明             |
+| --------- | ---------------- |
+| `smart`   | 智能施肥（默认） |
+| `both`    | 有机肥 + 普通肥  |
+| `organic` | 仅有机肥         |
+| `normal`  | 仅普通肥         |
+| `none`    | 关闭施肥         |
 
 ---
 
@@ -272,15 +273,19 @@ chmod +x ./qq-farm-bot && ./qq-farm-bot
 ## 常见问题
 
 ### Q: 登录失败怎么办？
+
 A: 请确保抓包获取的 code 有效，code 有时效性，过期需重新获取。
 
 ### Q: 如何批量添加账号？
+
 A: 在后台管理面板的「账号」标签页中，支持批量导入账号。
 
 ### Q: 化肥购买不生效？
+
 A: 请检查设置中是否开启了「化肥自动购买」功能，并确认购买数量和阈值配置正确。
 
 ### Q: 多季作物不自动施肥？
+
 A: 请在设置中开启「多季作物自动施肥」选项。
 
 ---
